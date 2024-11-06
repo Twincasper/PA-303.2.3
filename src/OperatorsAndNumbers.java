@@ -2,6 +2,7 @@ public class OperatorsAndNumbers {
     public static void main(String[] args) {
         leftShift();
         rightShift();
+        andOperator();
     }
         public static void leftShift() {
             int x = 2;
@@ -84,6 +85,18 @@ public class OperatorsAndNumbers {
 
             System.out.println("Decimal value of 32456 right shifted: " + x);
             System.out.println(Integer.toBinaryString(x));
-
         }
+
+    /* Write a program that declares three int variables: x, y, and z. Assign 7 to x and 17 to y. Write a comment that indicates what you predict will be the result of the bitwise and operation on x and y. Now use the bitwise AND (&) operator to derive the decimal and binary values, and assign the result to z. */
+
+    public static void andOperator() {
+        int x = 7;
+        int y = 17;
+
+        // Prediction of decimal value is 1
+        // Prediction of binary value is 0000 0001
+
+        int z = x & y;
+        System.out.println(Integer.toBinaryString(z));
+    }
 }
