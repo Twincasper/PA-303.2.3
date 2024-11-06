@@ -3,6 +3,9 @@ public class OperatorsAndNumbers {
         leftShift();
         rightShift();
         andOperator();
+        orOperator();
+        postfixOperator();
+        prefixAndPostfix();
     }
         public static void leftShift() {
             int x = 2;
@@ -87,16 +90,62 @@ public class OperatorsAndNumbers {
             System.out.println(Integer.toBinaryString(x));
         }
 
-    /* Write a program that declares three int variables: x, y, and z. Assign 7 to x and 17 to y. Write a comment that indicates what you predict will be the result of the bitwise and operation on x and y. Now use the bitwise AND (&) operator to derive the decimal and binary values, and assign the result to z. */
+        public static void andOperator() {
+            int x = 7;
+            int y = 17;
 
-    public static void andOperator() {
-        int x = 7;
-        int y = 17;
+            // Prediction of decimal value is 1
+            // Prediction of binary value is 0000 0001
 
-        // Prediction of decimal value is 1
-        // Prediction of binary value is 0000 0001
+            int z = x & y;
+            System.out.println(Integer.toBinaryString(z));
+        }
 
-        int z = x & y;
-        System.out.println(Integer.toBinaryString(z));
-    }
+    /* Now, with the preceding values, use the bitwise and operator to calculate the “or” value between x and y. As before, write a comment that indicates what you predict the values to be before printing them out. */
+
+        public static void orOperator() {
+            int x = 10;
+            int y = 25;
+
+            int z = x | y;
+
+            //
+
+            System.out.println("Decimal value of x | y: " + z);
+            System.out.println(Integer.toBinaryString(z));
+        }
+
+    /* Write a program that declares an integer variable, assigns a number, and uses a postfix increment operator to increase the value. Print the value before and after the increment operator. */
+
+        public static void postfixOperator() {
+            int num = 15;
+            System.out.println("Before increment: " + num);
+            num++;
+            System.out.println("After increment: " + num);
+        }
+
+   /* Write a program that demonstrates at least three ways to increment a variable by 1 and does this multiple times. Assign a value to an integer variable, print it, increment by 1, print it again, increment by 1, and then print it again. */
+
+        public static void incrementer() {
+            int num = 25;
+            num++;
+            System.out.println("After postfix increment: " + num);
+
+            ++num;
+            System.out.println("After prefix increment: " + num);
+
+            num += 1;
+            System.out.println("After addition increment: " + num);
+        }
+
+        /* Write a program that declares two integer variables: x, and y, and then assigns 5 to x and 8 to y. Create another variable sum and assign the value of ++x added to y, and print the result. Notice the value of the sum (should be 14). Now change the increment operator to postfix (x++) and re-run the program. Notice what the value of the sum is. The first configuration incremented x, and then calculated the sum, while the second configuration calculated the sum, and then incremented x. */
+
+        public static void prefixAndPostfix() {
+            int x = 5;
+            int y = 8;
+
+            int sum = x++ + y;
+            System.out.println("Prefix increment: " + sum);
+        }
+
 }
